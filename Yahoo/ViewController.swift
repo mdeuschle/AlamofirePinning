@@ -7,19 +7,63 @@
 //
 
 import UIKit
+import Alamofire
 
 class ViewController: UIViewController {
 
+    var manager = Manager()
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+
+        let serverTrustPolicies: [String: ServerTrustPolicy] = [
+            "www.yahoo.com": .PinCertificates(
+                certificates: ServerTrustPolicy.certificatesInBundle(),
+                validateCertificateChain: true,
+                validateHost: true
+            ),
+        ]
+
+        manager = Manager(
+            serverTrustPolicyManager: ServerTrustPolicyManager(policies: serverTrustPolicies)
+        )
+
+//        withoutCertificate()
+        withCertificate()
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    func withoutCertificate() {
+
+        let url = NSURL(string: "https://www.yahoo.com")!
+
+        Alamofire.request(.GET, url).response { request, response, data, error in
+
+            guard let data = data where error == nil else {
+                let err = error!.description
+                print(err)
+                return
+            }
+
+            let webText = String(data: data, encoding: NSUTF8StringEncoding)!
+            print(webText)
+        }
     }
 
+    func withCertificate() {
 
+        let url = NSURL(string: "https://www.yahoo.com")!
+
+        manager.request(.GET, url).response { request, response, data, error in
+
+            guard let data = data where error == nil else {
+                let err = error!.description
+                print(err)
+                return
+            }
+
+            let webText = String(data: data, encoding: NSUTF8StringEncoding)!
+            print(webText)
+        }
+    }
 }
 

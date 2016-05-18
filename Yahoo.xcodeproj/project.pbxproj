@@ -7,14 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A83EB97A1CED248E0066B92F /* www.yahoo.com.cer in Resources */ = {isa = PBXBuildFile; fileRef = A83EB9791CED248E0066B92F /* www.yahoo.com.cer */; };
 		A85CD9AD1CEBDAEF00A1ECF3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A85CD9AC1CEBDAEF00A1ECF3 /* AppDelegate.swift */; };
 		A85CD9AF1CEBDAEF00A1ECF3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A85CD9AE1CEBDAEF00A1ECF3 /* ViewController.swift */; };
 		A85CD9B21CEBDAEF00A1ECF3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A85CD9B01CEBDAEF00A1ECF3 /* Main.storyboard */; };
 		A85CD9B41CEBDAEF00A1ECF3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A85CD9B31CEBDAEF00A1ECF3 /* Assets.xcassets */; };
 		A85CD9B71CEBDAEF00A1ECF3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A85CD9B51CEBDAEF00A1ECF3 /* LaunchScreen.storyboard */; };
+		DA3D9E71F8E77E2D7ED661C8 /* Pods_Yahoo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65B43EEBA5756224EE545B99 /* Pods_Yahoo.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3FE4E2C509038E58E6E005A6 /* Pods-Yahoo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Yahoo.release.xcconfig"; path = "Pods/Target Support Files/Pods-Yahoo/Pods-Yahoo.release.xcconfig"; sourceTree = "<group>"; };
+		65B43EEBA5756224EE545B99 /* Pods_Yahoo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Yahoo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6F962A30026352C0F6C0FF6C /* Pods-Yahoo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Yahoo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Yahoo/Pods-Yahoo.debug.xcconfig"; sourceTree = "<group>"; };
+		A83EB9791CED248E0066B92F /* www.yahoo.com.cer */ = {isa = PBXFileReference; lastKnownFileType = file; path = www.yahoo.com.cer; sourceTree = "<group>"; };
 		A85CD9A91CEBDAEF00A1ECF3 /* Yahoo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Yahoo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A85CD9AC1CEBDAEF00A1ECF3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A85CD9AE1CEBDAEF00A1ECF3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -29,17 +35,46 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA3D9E71F8E77E2D7ED661C8 /* Pods_Yahoo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		77478B08408B6E332C24567A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6F962A30026352C0F6C0FF6C /* Pods-Yahoo.debug.xcconfig */,
+				3FE4E2C509038E58E6E005A6 /* Pods-Yahoo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		92CB0198EF2827B13AE8D07E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				65B43EEBA5756224EE545B99 /* Pods_Yahoo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A83EB96B1CECFB0F0066B92F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A83EB9791CED248E0066B92F /* www.yahoo.com.cer */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		A85CD9A01CEBDAEF00A1ECF3 = {
 			isa = PBXGroup;
 			children = (
+				A83EB96B1CECFB0F0066B92F /* Resources */,
 				A85CD9AB1CEBDAEF00A1ECF3 /* Yahoo */,
 				A85CD9AA1CEBDAEF00A1ECF3 /* Products */,
+				77478B08408B6E332C24567A /* Pods */,
+				92CB0198EF2827B13AE8D07E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,9 +106,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A85CD9BB1CEBDAEF00A1ECF3 /* Build configuration list for PBXNativeTarget "Yahoo" */;
 			buildPhases = (
+				461FD4809A9F68924BF227DB /* Check Pods Manifest.lock */,
 				A85CD9A51CEBDAEF00A1ECF3 /* Sources */,
 				A85CD9A61CEBDAEF00A1ECF3 /* Frameworks */,
 				A85CD9A71CEBDAEF00A1ECF3 /* Resources */,
+				2092225070BD540E3FB83639 /* Embed Pods Frameworks */,
+				ADDC7E84EAC82440FD2E5D3F /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -123,12 +161,61 @@
 			buildActionMask = 2147483647;
 			files = (
 				A85CD9B71CEBDAEF00A1ECF3 /* LaunchScreen.storyboard in Resources */,
+				A83EB97A1CED248E0066B92F /* www.yahoo.com.cer in Resources */,
 				A85CD9B41CEBDAEF00A1ECF3 /* Assets.xcassets in Resources */,
 				A85CD9B21CEBDAEF00A1ECF3 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2092225070BD540E3FB83639 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Yahoo/Pods-Yahoo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		461FD4809A9F68924BF227DB /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		ADDC7E84EAC82440FD2E5D3F /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Yahoo/Pods-Yahoo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A85CD9A51CEBDAEF00A1ECF3 /* Sources */ = {
@@ -249,6 +336,7 @@
 		};
 		A85CD9BC1CEBDAEF00A1ECF3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6F962A30026352C0F6C0FF6C /* Pods-Yahoo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Yahoo/Info.plist;
@@ -260,6 +348,7 @@
 		};
 		A85CD9BD1CEBDAEF00A1ECF3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3FE4E2C509038E58E6E005A6 /* Pods-Yahoo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Yahoo/Info.plist;
@@ -288,6 +377,7 @@
 				A85CD9BD1CEBDAEF00A1ECF3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
